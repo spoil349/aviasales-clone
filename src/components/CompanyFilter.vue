@@ -52,6 +52,7 @@ export default {
 
     &__title {
         @include filter-and-sort-title;
+        text-align: left;
         padding: 20px;
     }
 
