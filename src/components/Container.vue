@@ -22,7 +22,10 @@ export default {
 <style lang="scss">
 
 .container {
-    max-width: 754px;
-    margin: 0 auto 50px;
+  display: grid;
+  grid-template-columns: 232px auto;
+  grid-gap: 20px; 
+  max-width: 754px;
+  margin: 0 auto 50px;
 }
 </style>

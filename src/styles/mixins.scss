@@ -1,0 +1,18 @@
+@mixin filter-and-sort-title {
+    font: {
+        size: 12px;
+        weight: 600;
+    }
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+@mixin list-item-label {
+    font: {
+        size: 13px;
+        weight: 400;
+    }
+    line-height: 20px;
+    color: $main-text;
+}

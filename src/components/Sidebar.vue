@@ -7,7 +7,7 @@
 
 <script>
 import TransferFilter from './TransferFilter.vue'
-import CompanyFilter from './TransferFilter.vue'
+import CompanyFilter from './CompanyFilter.vue'
 
 export default {
   name: 'Sidebar',
@@ -19,5 +19,8 @@ export default {
 </script>
 
 <style lang="scss">
-
+.sidebar {
+  display: grid;
+  grid-gap: 20px;
+}
 </style>
