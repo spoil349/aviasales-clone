@@ -50,10 +50,15 @@ export default {
 		&__item {
       flex: 0 1 33%;
       padding: 15px;
+      margin-bottom: 20px;
       background-color: $white;
       border: 1px solid $light-gray;
       cursor: pointer;
       @include filter-and-sort-title;
+
+      &:hover {
+        background-color: $light-blue;
+      }
 
       &:first-child {
         border-top-left-radius: 5px;
