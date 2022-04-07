@@ -22,5 +22,6 @@ export default {
 .sidebar {
   display: grid;
   grid-gap: 20px;
+  height: fit-content;
 }
 </style>

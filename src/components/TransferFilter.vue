@@ -17,6 +17,8 @@
 
 export default {
   name: 'TransferFilter',
+  components: {
+  },
   data() {
     return {
       transferVariants: [
@@ -39,8 +41,6 @@ export default {
       ]   
     }
   },
-  components: {
-  },
 }
 </script>
 
@@ -50,7 +50,7 @@ export default {
 
 .transfer-filter {
     background-color: $white;
-    box-shadow: 0px 2px 8px 0px #0000001A;
+    box-shadow: 0px 2px 8px 0px $shadow-color;
     border-radius: 5px;
     padding-bottom: 15px;
 

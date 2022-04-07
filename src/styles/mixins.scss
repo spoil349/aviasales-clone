@@ -16,3 +16,20 @@
     line-height: 20px;
     color: $main-text;
 }
+
+@mixin segment-title {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    color: $text-gray;
+    text-transform: uppercase;
+}
+
+@mixin segment-info {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    color: $black;
+    text-transform: uppercase;
+}

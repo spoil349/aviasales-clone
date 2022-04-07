@@ -38,48 +38,48 @@ export default {
 @import '../styles/mixins.scss';
 
 .sort {
+  margin-bottom: 20px;
 
-		// .sort__list
-		&__list {
-      display: flex;
-      flex-flow: row nowrap;
-      list-style-type: none;
-		}
+  // .sort__list
+  &__list {
+    display: flex;
+    flex-flow: row nowrap;
+    list-style-type: none;
+  }
 
-		// .sort__item
-		&__item {
-      flex: 0 1 33%;
-      padding: 15px;
-      margin-bottom: 20px;
-      background-color: $white;
-      border: 1px solid $light-gray;
-      cursor: pointer;
-      @include filter-and-sort-title;
+  // .sort__item
+  &__item {
+    flex: 0 1 33%;
+    padding: 15px;
+    background-color: $white;
+    border: 1px solid $light-gray;
+    cursor: pointer;
+    @include filter-and-sort-title;
 
-      &:hover {
-        background-color: $light-blue;
-      }
+    &:hover {
+      background-color: $light-blue;
+    }
 
-      &:first-child {
-        border-top-left-radius: 5px;
-        border-bottom-left-radius: 5px;
-      }
+    &:first-child {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
 
-      &:last-child {
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 5px;
-      }
+    &:last-child {
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
 
-      &:not(:first-child) {
-        border-left: none;
-      }
+    &:not(:first-child) {
+      border-left: none;
+    }
 
-      &.active {
-        background-color: $blue;
-        border-color: $blue;
-        color: $white;
-      }
-		}
+    &.active {
+      background-color: $blue;
+      border-color: $blue;
+      color: $white;
+    }
+  }
 }
 
 </style>
