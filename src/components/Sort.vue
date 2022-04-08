@@ -82,4 +82,10 @@ export default {
   }
 }
 
+@media all and (max-width: 767px) {
+  .sort {
+    margin-bottom: 10px;
+  }
+}
+
 </style>

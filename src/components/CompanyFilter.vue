@@ -69,6 +69,22 @@ export default {
     }
 }
 
+@media all and (max-width: 767px) {
+  .company-filter {
+    padding-bottom: 10px;
+    box-shadow: none;
+
+    &__title {
+      padding: 10px 20px 0;
+    }
+    
+    &__list {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
 .custom-radio {
     display: flex;
     align-items: center;

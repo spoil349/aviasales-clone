@@ -72,6 +72,23 @@ export default {
     }
 }
 
+@media all and (max-width: 767px) {
+  .transfer-filter {
+    text-align: left;
+    box-shadow: none;
+    padding-bottom: 5px;
+
+    &__title {
+      padding: 10px 20px 0;
+    }
+
+    &__list {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
 .custom-checkbox {
     display: flex;
     align-items: center;

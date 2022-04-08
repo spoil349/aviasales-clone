@@ -28,4 +28,10 @@ export default {
   text-align: center;
   margin-top: 50px;
 }
+
+@media all and (max-width: 767px) {
+  #app {
+    margin-top: 20px;
+  }
+}
 </style>

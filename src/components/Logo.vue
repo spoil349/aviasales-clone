@@ -1,6 +1,6 @@
 <template>
     <div class="logo">
-        <img class="logo__img" src="../assets/logo.svg" alt="">
+        <img class="logo__img" width="60" height="60" src="../assets/logo.svg" alt="">
     </div>
 </template>
 
@@ -22,6 +22,12 @@ export default {
         width: 60px;
         height: 60px;
         margin: 0 auto;
+    }
+}
+
+@media all and (max-width: 767px) {
+    .logo {
+        margin-bottom: 20px;
     }
 }
 </style>

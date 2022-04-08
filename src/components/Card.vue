@@ -43,4 +43,15 @@ export default {
     font-weight: 600;
   }
 }
+
+@media all and (max-width: 767px) {
+
+  .card {
+    box-shadow: none;
+    border: 1px solid $light-gray;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+}
 </style>

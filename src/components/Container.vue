@@ -28,4 +28,12 @@ export default {
   max-width: 754px;
   margin: 0 auto 50px;
 }
+
+@media all and (max-width: 767px) {
+  .container {
+    grid-template-columns: none;
+    grid-gap: 10px;
+    padding: 0 10px 10px;
+  }
+}
 </style>
