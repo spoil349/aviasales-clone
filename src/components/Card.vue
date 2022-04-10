@@ -2,7 +2,7 @@
     <div class="card">
       <div class="card__upper">
         <p class="card__price">13 400 Р</p>
-        <img class="card__company" width="110" height="36" src="../assets/s7-logo.png" alt="company_logo">
+        <AviaCompanyLogo />
       </div>
       <Segment />
     </div>
@@ -10,11 +10,13 @@
 
 <script>
 import Segment from './Segment.vue'
+import AviaCompanyLogo from './AviaCompanyLogo.vue'
 
 export default {
   name: 'Card',
   components: {
     Segment,
+    AviaCompanyLogo
   },
 }
 </script>
