@@ -8,12 +8,20 @@
 <script>
 import Container from './components/Container.vue'
 import Logo from './components/Logo.vue'
+import {mapActions} from 'vuex'
 
 export default {
   name: 'App',
   components: {
     Logo,
     Container
+  },
+  methods: {
+    ...mapActions(['fetchTickets', 'fetchSegments'])
+  },
+  async mounted() {
+    this.fetchTickets()
+    this.fetchSegments()
   }
 }
 </script>

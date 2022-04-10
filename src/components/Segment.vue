@@ -1,16 +1,16 @@
 <template>
     <div class="segment">
         <div class="segment__column">
-            <p class="segment__title">MOW – HKT</p>
-            <p class="segment__info">10:45 – 08:00</p>
+            <p class="segment__title">{{segmentInfo.origin}} – {{segmentInfo.destination}}</p>
+            <p class="segment__info">{{segmentInfo.dateStart | moment('HH:mm')}} - {{segmentInfo.dateEnd | moment('HH:mm')}}</p>
         </div>
         <div class="segment__column">
             <p class="segment__title">В пути</p>
-            <p class="segment__info">21ч 15м</p>
+            <p class="segment__info">{{segmentInfo.duration | duration('hours')}}ч {{segmentInfo.duration | duration('minutes')}}м</p>
         </div>
         <div class="segment__column">
-            <p class="segment__title">2 пересадки</p>
-            <p class="segment__info">HKG, JNB</p>
+            <p class="segment__title">{{segmentInfo.stops.length}} пересадки</p>
+            <p class="segment__info">{{segmentInfo.stops.join(', ')}}</p>
         </div>
     </div>
 </template>
@@ -18,8 +18,14 @@
 <script>
 export default {
   name: 'Segment',
-  components: {
-  },
+  props: {
+        segmentInfo: {
+        type: Object,
+        default: () => {
+            return {}
+        }
+    }
+  }
 }
 </script>
 
@@ -32,6 +38,10 @@ export default {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
     text-align: left;
+
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
 
     // .segment__column
     &__column {

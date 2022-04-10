@@ -1,20 +1,39 @@
 <template>
     <div class="card">
       <div class="card__upper">
-        <p class="card__price">13 400 Р</p>
+        <p class="card__price">{{ticketInfo.price}}</p>
         <img class="card__company" width="110" height="36" src="../assets/s7-logo.png" alt="company_logo">
       </div>
-      <Segment />
+      <Segment
+        v-for="segment in filteredSegments"
+        :key="segment.id"
+        :segmentInfo="segment"
+      />
     </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import Segment from './Segment.vue'
 
 export default {
   name: 'Card',
+  props: {
+    ticketInfo: {
+      type: Object,
+      default: () => {
+        return {}
+      }
+    },
+  },
   components: {
     Segment,
+  },
+  computed: {
+    ...mapGetters(['currentTicketSegments']),
+    filteredSegments() {
+      return this.currentTicketSegments(this.ticketInfo.segments)
+    }
   },
 }
 </script>
