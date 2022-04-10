@@ -17,11 +17,12 @@ export default {
     Container
   },
   methods: {
-    ...mapActions(['fetchTickets', 'fetchSegments'])
+    ...mapActions(['fetchTickets', 'fetchSegments', 'fetchCompanies'])
   },
   async mounted() {
     this.fetchTickets()
     this.fetchSegments()
+    this.fetchCompanies()
   }
 }
 </script>

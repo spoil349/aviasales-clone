@@ -1,8 +1,10 @@
 <template>
     <div class="card">
       <div class="card__upper">
-        <p class="card__price">13 400 Р</p>
-        <AviaCompanyLogo />
+        <p class="card__price">{{ticketInfo.price.toLocaleString('ru')}} Р</p>
+        <AviaCompanyLogo
+          :logoName="companyLogo"
+        />
       </div>
       <Segment
         v-for="segment in filteredSegments"
@@ -32,9 +34,12 @@ export default {
     AviaCompanyLogo
   },
   computed: {
-    ...mapGetters(['currentTicketSegments']),
+    ...mapGetters(['currentTicketSegments', 'companyLogoName']),
     filteredSegments() {
       return this.currentTicketSegments(this.ticketInfo.segments)
+    },
+    companyLogo() {
+      return this.companyLogoName(this.ticketInfo.companyId)
     }
   },
 }

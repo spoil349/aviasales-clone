@@ -1,12 +1,30 @@
 <template>
-    <button class="load-more" type="button">Показать еще 5 билетов!</button>
+    <button
+        class="load-more"
+        type="button"
+        @click="showMoreTickets"
+    >
+        Показать еще 5 билетов!
+    </button>
 </template>
 
 <script>
+import { mapActions, mapMutations } from 'vuex'
+
 export default {
   name: 'LoadMore',
-  components: {
-  }
+  data() {
+      return {
+        ticketsQuantity: 5
+      }
+  },
+  methods: {
+    ...mapActions(['fetchTickets']),
+    showMoreTickets() {
+        this.ticketsQuantity += 5
+        this.fetchTickets(this.ticketsQuantity)        
+    }
+  },
 }
 </script>
 

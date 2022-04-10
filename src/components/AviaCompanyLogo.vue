@@ -1,9 +1,14 @@
 <template>
-    <img class="card__company" width="110" height="36" src="../assets/s7-logo.png" alt="company_logo">
+    <img
+        class="card__company"
+        width="110"
+        height="36"
+        alt="company_logo"
+        :src="require(`../assets/${logoName}`)"
+    >
 </template>
 
 <script>
-
 export default {
   name: 'AviaCompanyLogo',
   props: {
@@ -13,10 +18,6 @@ export default {
             return ''
         }
     }
-  },
-  components: {
-  },
-  computed: {
   },
 }
 </script>

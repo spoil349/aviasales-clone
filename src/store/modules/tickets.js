@@ -2,6 +2,7 @@ export default {
     state: {
         tickets: [],
         segments: [],
+        companies: [],
     },
     mutations: {
         updateTickets(state, tickets) {
@@ -9,6 +10,9 @@ export default {
         },
         updateSegments(state, segments) {
             state.segments = segments
+        },
+        updateCompanies(state, companies) {
+            state.companies = companies
         },
     },
     actions: {
@@ -23,6 +27,12 @@ export default {
             const segments = await resSegments.json()
 
             commit('updateSegments', segments)
+        },
+        async fetchCompanies({ commit }) {
+            const resCompanies = await fetch('http://localhost:3000/companies')
+            const companies = await resCompanies.json()
+
+            commit('updateCompanies', companies)
         }
     },
     getters: {
@@ -34,6 +44,13 @@ export default {
         },
         currentTicketSegments: (state) => (ids) => {
             return state.segments.filter(segment => ids.includes(segment.id))
+        },
+        companyLogoName: (state) => (ticketCompanyId) => {
+            return state.companies.map(company => {
+                if (company.id === ticketCompanyId) {
+                    return company.logo
+                }
+            }).join('')
         }
     }
 }
