@@ -1,8 +1,8 @@
 <template>
     <div class="card">
       <div class="card__upper">
-        <p class="card__price">13 400 Р</p>
-        <AviaCompanyLogo />
+        <p class="card__price">{{ticketInfo.price}}</p>
+        <img class="card__company" width="110" height="36" src="../assets/s7-logo.png" alt="company_logo">
       </div>
       <Segment
         v-for="segment in filteredSegments"
@@ -15,7 +15,6 @@
 <script>
 import { mapGetters } from 'vuex'
 import Segment from './Segment.vue'
-import AviaCompanyLogo from './AviaCompanyLogo.vue'
 
 export default {
   name: 'Card',
@@ -29,7 +28,6 @@ export default {
   },
   components: {
     Segment,
-    AviaCompanyLogo
   },
   computed: {
     ...mapGetters(['currentTicketSegments']),

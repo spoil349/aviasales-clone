@@ -1,8 +1,13 @@
 <template>
     <div class="card">
       <div class="card__upper">
+<<<<<<< HEAD
+        <p class="card__price">{{ticketInfo.price}}</p>
+        <img class="card__company" width="110" height="36" src="../assets/s7-logo.png" alt="company_logo">
+=======
         <p class="card__price">13 400 Р</p>
         <AviaCompanyLogo />
+>>>>>>> master
       </div>
       <Segment
         v-for="segment in filteredSegments"
