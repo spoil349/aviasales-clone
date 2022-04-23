@@ -1,0 +1,14 @@
+@import './variables.scss';
+@import './normalize.scss';
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+html, body {
+  font-family: 'Open sans', sans-serif;
+  color: $main-text;
+}
+
+body {
+    background-color: $background-color;
+    height: 100%;
+}

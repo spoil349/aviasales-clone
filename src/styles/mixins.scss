@@ -1,0 +1,35 @@
+@mixin filter-and-sort-title {
+    font: {
+        size: 12px;
+        weight: 600;
+    }
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+@mixin list-item-label {
+    font: {
+        size: 13px;
+        weight: 400;
+    }
+    line-height: 20px;
+    color: $main-text;
+}
+
+@mixin segment-title {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    color: $text-gray;
+    text-transform: uppercase;
+}
+
+@mixin segment-info {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    color: $black;
+    text-transform: uppercase;
+}

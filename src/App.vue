@@ -1,28 +1,46 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Logo />
+    <Container />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Container from './components/Container.vue'
+import Logo from './components/Logo.vue'
+import {mapActions} from 'vuex'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Logo,
+    Container
+  },
+  methods: {
+    ...mapActions(['fetchTickets', 'fetchSegments', 'fetchCompanies'])
+  },
+  async mounted() {
+    this.fetchTickets()
+    this.fetchSegments()
+    this.fetchCompanies()
   }
 }
 </script>
 
 <style lang="scss">
+@import './styles/variables.scss';
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Open sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 50px;
+}
+
+@media (max-width: 767px) {
+  #app {
+    margin-top: 20px;
+  }
 }
 </style>
