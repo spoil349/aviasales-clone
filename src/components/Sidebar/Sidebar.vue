@@ -1,28 +1,28 @@
 <template>
     <div class="sidebar">
         <FiltersButton />
-        <TransferFilter />
+        <TransferSorting />
         <CompanyFilter />
     </div>
 </template>
 
 <script>
-import TransferFilter from './TransferFilter.vue'
+import TransferSorting from './TransferSorting.vue'
 import CompanyFilter from './CompanyFilter.vue'
-import FiltersButton from './FiltersButton.vue'
+import FiltersButton from '../FiltersButton.vue'
 
 export default {
   name: 'Sidebar',
   components: {
     FiltersButton,
-    TransferFilter,
+    TransferSorting,
     CompanyFilter
   }
 }
 </script>
 
 <style lang="scss">
-@import '../styles/variables.scss';
+@import '../../styles/variables.scss';
 
 .sidebar {
   display: grid;
@@ -30,7 +30,7 @@ export default {
   height: fit-content;
 }
 
-@media all and (max-width: 767px) {
+@media (max-width: 767px) {
   .sidebar {
     grid-gap: 0;
     border: 1px solid $light-gray;

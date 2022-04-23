@@ -25,7 +25,7 @@ export default {
     }
 }
 
-@media all and (max-width: 767px) {
+@media (max-width: 767px) {
     .logo {
         margin-bottom: 20px;
     }

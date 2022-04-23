@@ -14,9 +14,8 @@
 </template>
 
 <script>
-
 export default {
-  name: 'TransferFilter',
+  name: 'TransferSorting',
   components: {
   },
   data() {
@@ -45,8 +44,8 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../styles/variables.scss';
-@import '../styles/mixins.scss';
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
 
 .transfer-filter {
     background-color: $white;
@@ -72,7 +71,7 @@ export default {
     }
 }
 
-@media all and (max-width: 767px) {
+@media (max-width: 767px) {
   .transfer-filter {
     text-align: left;
     box-shadow: none;
@@ -114,7 +113,7 @@ export default {
 
         &::before {
             content: "";
-            background: url('../assets/tick.svg') center center no-repeat;
+            background: url('../../assets/tick.svg') center center no-repeat;
             display: block;
             position: absolute;
             top: 50%;

@@ -7,8 +7,8 @@
 
 <script>
 
-import Sidebar from './Sidebar.vue'
-import Main from './Main.vue'
+import Sidebar from './Sidebar/Sidebar.vue'
+import Main from './Main/Main.vue'
 
 export default {
   name: 'Container',
@@ -29,7 +29,7 @@ export default {
   margin: 0 auto 50px;
 }
 
-@media all and (max-width: 767px) {
+@media (max-width: 767px) {
   .container {
     grid-template-columns: none;
     grid-gap: 10px;

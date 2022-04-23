@@ -46,7 +46,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../styles/variables.scss';
+@import '../../styles/variables.scss';
 
 .card {
   margin-bottom: 20px;
@@ -70,7 +70,7 @@ export default {
   }
 }
 
-@media all and (max-width: 767px) {
+@media (max-width: 767px) {
 
   .card {
     box-shadow: none;

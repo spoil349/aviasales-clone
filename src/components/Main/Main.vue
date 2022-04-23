@@ -7,7 +7,7 @@
 
 <script>
 
-import Sort from './Sort.vue'
+import Sort from './TopPanelSort.vue'
 import Results from './Results.vue'
 
 export default {

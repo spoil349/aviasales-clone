@@ -41,8 +41,8 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../styles/variables.scss';
-@import '../styles/mixins.scss';
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
 
 .company-filter {
     background-color: $white;
@@ -69,7 +69,7 @@ export default {
     }
 }
 
-@media all and (max-width: 767px) {
+@media (max-width: 767px) {
   .company-filter {
     padding-bottom: 10px;
     box-shadow: none;

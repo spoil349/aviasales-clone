@@ -2,11 +2,11 @@
     <div class="segment">
         <div class="segment__column">
             <p class="segment__title">{{segmentInfo.origin}} – {{segmentInfo.destination}}</p>
-            <p class="segment__info">{{segmentInfo.dateStart | moment('HH:mm')}} - {{segmentInfo.dateEnd | moment('HH:mm')}}</p>
+            <!-- <p class="segment__info">{{segmentInfo.dateStart | moment('HH:mm')}} - {{segmentInfo.dateEnd | moment('HH:mm')}}</p> -->
         </div>
         <div class="segment__column">
             <p class="segment__title">В пути</p>
-            <p class="segment__info">{{segmentInfo.duration | duration('hours')}}ч {{segmentInfo.duration | duration('minutes')}}м</p>
+            <!-- <p class="segment__info">{{segmentInfo.duration | duration('hours')}}ч {{segmentInfo.duration | duration('minutes')}}м</p> -->
         </div>
         <div class="segment__column">
             <p class="segment__title">{{segmentInfo.stops.length}} пересадки</p>
@@ -30,8 +30,8 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../styles/variables.scss';
-@import '../styles/mixins.scss';
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
 
 .segment {
     display: grid;

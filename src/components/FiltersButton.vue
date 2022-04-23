@@ -4,7 +4,7 @@
         type="button"
         @click="toggleFilters()"
     >
-        {{buttonText}}
+        {{filtersOpened ? buttonTextVariants.open : buttonTextVariants.close}}
     </button>
 </template>
 
@@ -15,14 +15,17 @@ export default {
   data() {
     return {
       filtersOpened: true,
-      buttonText: 'Раскрыть фильтры'
+      buttonTextVariants: {
+        open: 'Раскрыть фильтры',
+        close: 'Скрыть фильтры'
+      }
     }
   },
   components: {
   },
   methods: {
     toggleFilters() {
-        this.filtersOpened = !this.filtersOpened;
+      this.filtersOpened = !this.filtersOpened;
     }
   }
 }
@@ -47,7 +50,7 @@ export default {
   }
 }
 
-@media all and (max-width: 767px) {
+@media (max-width: 767px) {
   .filters-button {
     display: block;
   }

@@ -5,20 +5,20 @@
           :key="ticket.id"
           :ticketInfo="ticket"
         />
-        <LoadMore />
+        <LoadMoreButton />
     </div>
 </template>
 
 <script>
-import Card from './Card.vue'
-import LoadMore from './LoadMore.vue'
+import Card from '../Card/Card.vue'
+import LoadMoreButton from '../LoadMoreButton.vue'
 import { mapGetters } from 'vuex'
 
 export default {
   name: 'Results',
   components: {
     Card,
-    LoadMore
+    LoadMoreButton
   },
   computed: {
     ...mapGetters(['fetchedTickets'])

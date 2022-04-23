@@ -9,7 +9,7 @@
 <script>
 
 export default {
-  name: 'Sort',
+  name: 'TopPanelSort',
   data() {
     return {
       sorts: [
@@ -34,8 +34,8 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../styles/variables.scss';
-@import '../styles/mixins.scss';
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
 
 .sort {
   margin-bottom: 20px;
@@ -82,7 +82,7 @@ export default {
   }
 }
 
-@media all and (max-width: 767px) {
+@media (max-width: 767px) {
   .sort {
     margin-bottom: 10px;
   }

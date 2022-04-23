@@ -12,7 +12,7 @@
 import { mapActions, mapMutations } from 'vuex'
 
 export default {
-  name: 'LoadMore',
+  name: 'LoadMoreButton',
   data() {
       return {
         ticketsQuantity: 5
